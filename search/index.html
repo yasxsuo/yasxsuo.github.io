@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>搜索 | YASXSUO</title><meta name="author" content="YASXSUO"><meta name="copyright" content="YASXSUO"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="搜索文章   在下方搜索框中输入关键词，查找您感兴趣的文章内容。                                         请输入关键词开始搜索                   .search-container {max-width:860px;margin:0 auto;padding:1rem 1.25rem;} .search-container h1 {m">
+<meta property="og:type" content="website">
+<meta property="og:title" content="搜索">
+<meta property="og:url" content="http://example.com/search/index.html">
+<meta property="og:site_name" content="YASXSUO">
+<meta property="og:description" content="搜索文章   在下方搜索框中输入关键词，查找您感兴趣的文章内容。                                         请输入关键词开始搜索                   .search-container {max-width:860px;margin:0 auto;padding:1rem 1.25rem;} .search-container h1 {m">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-09-26T08:46:38.000Z">
+<meta property="article:modified_time" content="2025-09-26T09:18:45.435Z">
+<meta property="article:author" content="YASXSUO">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/search/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '搜索',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'search'
+}</script><meta name="generator" content="Hexo 8.0.0"><link rel="alternate" href="/atom.xml" title="YASXSUO" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/resources/"><i class="fa-fw fas fa-download"></i><span> 资源</span></a></div><div class="menus_item"><a class="site-page" href="/search/"><i class="fa-fw fas fa-search"></i><span> 搜索</span></a></div></div></div></div><div class="page type-search" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">YASXSUO</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/resources/"><i class="fa-fw fas fa-download"></i><span> 资源</span></a></div><div class="menus_item"><a class="site-page" href="/search/"><i class="fa-fw fas fa-search"></i><span> 搜索</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">搜索</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><div class="search-container">
+  <h1>搜索文章</h1>
+  <p>在下方搜索框中输入关键词，查找您感兴趣的文章内容。</p>
+  
+  <div id="local-search">
+    <div class="search-content">
+      <div class="search-input">
+        <input type="text" placeholder="请输入搜索关键词..." id="local-search-input" autocomplete="off">
+      </div>
+      <div id="local-search-status" style="margin-top:8px;color:#888;font-size:14px;">请输入关键词开始搜索</div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+.search-container {max-width:860px;margin:0 auto;padding:1rem 1.25rem;}
+.search-container h1 {margin:0 0 .5rem;font-size:1.9rem;}
+#local-search-input {width:100%;padding:.6rem .75rem;font-size:16px;border:1px solid var(--color-border,#ddd);border-radius:6px;outline:none;transition:border-color .2s,box-shadow .2s;}
+#local-search-input:focus {border-color:var(--color-primary,#42b983);box-shadow:0 0 0 2px rgba(66,185,131,.15);} 
+#local-search-result {margin-top:1.25rem;}
+.search-hit-count {margin:0 0 .75rem;color:#555;font-size:.9rem;}
+.search-item {list-style:none;margin:0 0 1.25rem;padding:0 0 1.1rem;border-bottom:1px dashed #e1e1e1;}
+.search-item:last-child {border-bottom:none;}
+.search-item a {font-weight:600;font-size:1.05rem;color:var(--color-primary,#42b983);text-decoration:none;}
+.search-item a:hover {text-decoration:underline;}
+.search-snippet {margin:.45rem 0 0;line-height:1.55;color:#333;font-size:.92rem;}
+mark.search-keyword {background:#ffe58f;padding:0 .15em;border-radius:2px;}
+#local-search-result ol {padding-left:1.1rem;margin:0;}
+#local-search-result .no-result {color:#888;font-size:.9rem;padding:.75rem 0;}
+#local-search-status.loading:after {content:' 正在加载索引...';}
+#local-search-status.error {color:#c00;}
+</style>
+
+<script>
+(function(){
+  const input = document.getElementById('local-search-input');
+  const resultRoot = document.getElementById('local-search-result');
+  const statusEl = document.getElementById('local-search-status');
+  const SEARCH_PATH = '/search.xml'; // 与 _config.yml 中 search.path 一致
+  let indexData = [];
+  let loaded = false;
+  let loading = false;
+
+  function fetchIndex(){
+    if(loaded || loading) return;
+    loading = true;
+    statusEl.textContent = '正在加载索引...';
+    fetch(SEARCH_PATH + '?v=' + Date.now())
+      .then(r => {
+        if(!r.ok) throw new Error('网络错误: ' + r.status);
+        return r.text();
+      })
+      .then(text => {
+        const doc = new DOMParser().parseFromString(text,'text/xml');
+        indexData = Array.from(doc.querySelectorAll('entry')).map(e => ({
+          title: (e.querySelector('title')?.textContent || '').trim(),
+          content: (e.querySelector('content')?.textContent || '').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(),
+            // 处理 url 兼容 GitHub Pages 子路径：如果你部署到 username.github.io 则保持原样
+          url: decodeURIComponent((e.querySelector('url')?.textContent || '').trim())
+        })).filter(p => p.title);
+        loaded = true;
+        statusEl.textContent = '索引加载完成，输入开始搜索';
+        if(input.value.trim()) runSearch();
+      })
+      .catch(err => {
+        statusEl.classList.add('error');
+        statusEl.textContent = '索引加载失败：' + err.message;
+      });
+  }
+
+  // 简单中文 + 英文分词：按空白或破折号分；若整串无空格且包含中文，则按单字拆分
+  function tokenize(q){
+    q = q.trim();
+    if(!q) return [];
+    let parts = q.split(/[-\s]+/).filter(Boolean);
+    if(parts.length === 1 && /[\u4e00-\u9fa5]/.test(parts[0])){
+      parts = parts[0].split('').filter(ch => /[\u4e00-\u9fa50-9A-Za-z]/.test(ch));
+    }
+    // 去重
+    return [...new Set(parts.map(p => p.toLowerCase()))];
+  }
+
+  function highlight(text, tokens){
+    if(!tokens.length) return text;
+    // 避免嵌套 mark：先对 tokens 按长度排序
+    const sorted = [...tokens].sort((a,b)=> b.length - a.length);
+    sorted.forEach(t => {
+      const esc = t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      text = text.replace(new RegExp(esc,'gi'), m => `<mark class="search-keyword">${m}</mark>`);
+    });
+    return text;
+  }
+
+  function buildSnippet(content, tokens){
+    if(!tokens.length) return content.slice(0,120) + (content.length>120?'...':'');
+    let firstIndex = -1;
+    for(const t of tokens){
+      const idx = content.toLowerCase().indexOf(t.toLowerCase());
+      if(idx !== -1 && (firstIndex === -1 || idx < firstIndex)) firstIndex = idx;
+    }
+    if(firstIndex === -1) firstIndex = 0;
+    const start = Math.max(0, firstIndex - 25);
+    const end = Math.min(content.length, firstIndex + 95);
+    let snippet = content.substring(start, end);
+    if(start > 0) snippet = '...' + snippet;
+    if(end < content.length) snippet = snippet + '...';
+    return highlight(snippet, tokens);
+  }
+
+  function runSearch(){
+    const query = input.value.trim();
+    if(!query){
+      resultRoot.innerHTML = '';
+      statusEl.textContent = loaded ? '请输入关键词开始搜索' : '索引尚未加载';
+      return;
+    }
+    if(!loaded){
+      fetchIndex();
+      return; // 等索引再触发
+    }
+    const tokens = tokenize(query);
+    if(!tokens.length){
+      resultRoot.innerHTML = '';
+      statusEl.textContent = '请输入有效关键词';
+      return;
+    }
+    const results = [];
+    const qLower = tokens.map(t => t.toLowerCase());
+
+    for(const post of indexData){
+      const titleLower = post.title.toLowerCase();
+      const contentLower = post.content.toLowerCase();
+      // 所有 token 都需至少出现在标题或正文之一
+      let allMatch = true;
+      for(const t of qLower){
+        if(!titleLower.includes(t) && !contentLower.includes(t)) { allMatch = false; break; }
+      }
+      if(!allMatch) continue;
+      // 计算命中得分：标题命中加权 + 正文命中
+      let score = 0;
+      qLower.forEach(t => {
+        if(titleLower.includes(t)) score += 5;
+        const occurrences = contentLower.split(t).length - 1;
+        score += occurrences;
+      });
+      results.push({post, score});
+    }
+
+    results.sort((a,b)=> b.score - a.score);
+
+    if(!results.length){
+      resultRoot.innerHTML = '<div class="no-result">未找到与 "' + query.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '" 相关的内容</div>';
+      statusEl.textContent = '0 条结果';
+      return;
+    }
+
+    const tokensOrig = tokens; // 用原 tokens 高亮
+    const list = results.map(({post}, i) => {
+      const snippet = buildSnippet(post.content, tokensOrig);
+      const title = highlight(post.title, tokensOrig);
+      const safeUrl = post.url.startsWith('http') ? post.url : (post.url.startsWith('/') ? post.url : '/' + post.url);
+      return `<li class="search-item" value="${i+1}"><a href="${safeUrl}">${title}</a><div class="search-snippet">${snippet}</div></li>`;
+    });
+
+    resultRoot.innerHTML = `<div class="search-hit-count">共 ${results.length} 条结果</div><ol>${list.join('')}</ol>`;
+    statusEl.textContent = `找到 ${results.length} 条结果`;
+  }
+
+  input.addEventListener('focus', fetchIndex, {once:true});
+  input.addEventListener('input', () => { runSearch(); });
+  // 如果用户在 page 载入时 URL 带 ?q=xxx 自动搜索
+  const params = new URLSearchParams(location.search);
+  const qParam = params.get('q');
+  if(qParam){
+    input.value = qParam;
+    fetchIndex();
+    const timer = setInterval(()=>{ if(loaded){ runSearch(); clearInterval(timer);} }, 120);
+  }
+})();
+</script>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">YASXSUO</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/26/picture-test/" title="如何在博客中插入图片">如何在博客中插入图片</a><time datetime="2025-09-26T08:30:00.000Z" title="发表于 2025-09-26 16:30:00">2025-09-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/22/hello-world/" title="Hello World">Hello World</a><time datetime="2025-09-22T09:33:00.000Z" title="发表于 2025-09-22 17:33:00">2025-09-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo-%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">Hexo 教程</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">技术教程</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.5em; color: #99a9bf">Hexo</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">教程</a> <a href="/tags/%E5%9B%BE%E7%89%87/" style="font-size: 1.1em; color: #999">图片</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 1.1em; color: #999">入门</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/09/">
+            <span class="card-archive-list-date">
+              九月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-26T12:59:38.646Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By YASXSUO</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.0.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/09/22/hello-world/</url>
+    <content><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server$ hexo server
+
+More info: Server
+Generate static files$ hexo generate
+
+More info: Generating
+Deploy to remote sites$ hexo deploy
+
+More info: Deployment
+]]></content>
+      <categories>
+        <category>Hexo 教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在博客中插入图片</title>
+    <url>/2025/09/26/picture-test/</url>
+    <content><![CDATA[前言在使用Hexo编写博客时，插入图片是一个常见的需求。本文将详细介绍如何在Hexo博客中正确插入图片，并确保图片在本地预览和部署后都能正常显示。
+方法一：使用资源文件夹（推荐）这是Hexo官方推荐的方法，也是我们项目中使用的方法。
+1. 启用资源文件夹首先确保在 _config.yml 中启用了 post_asset_folder 选项：
+post_asset_folder: true
+
+2. 创建文章使用以下命令创建新文章：
+hexo new &quot;文章标题&quot;
+
+如果文章标题包含空格，请使用双引号包围：
+hexo new &quot;如何在Hexo博客中插入图片&quot;
+
+3. 放置图片执行上述命令后，Hexo会自动创建：
+
+一篇文章：source/_posts/如何在Hexo博客中插入图片.md
+一个同名文件夹：source/_posts/如何在Hexo博客中插入图片/
+
+将要插入的图片文件放入这个同名文件夹中。
+4. 引用图片在Markdown文章中使用相对路径引用图片：
+![图片描述](如何在Hexo博客中插入图片/图片文件名.jpg)
+
+例如：
+![示例图片](1.jpg)（效果如下）
+
+方法二：使用全局图片文件夹1. 创建图片文件夹在 source 目录下创建一个专门存放图片的文件夹，如images,路径则是 source/images/。
+2. 放置图片将图片文件放入 source/images/ 文件夹中。
+3. 引用图片在Markdown文章中使用相对路径引用图片：
+![图片描述](/images/图片文件名.jpg)
+例如：
+![示例图片](/images/3.jpg)（效果如下）
+
+方法三：使用在线图片可以将图片上传到图床或云存储服务，然后在文章中使用图片的URL（这个我以前用过，但是后来那个博客没坚持下去就没有再做过这里不再举例）：
+![图片描述](https://example.com/path/to/image.jpg)
+
+注意事项
+路径区分大小写：确保图片文件名和引用路径的大小写完全一致。
+支持的图片格式：常见格式如 JPG、PNG、GIF 等都可以正常使用。
+图片优化：建议对大图片进行压缩，以提高网页加载速度。
+alt 属性：为图片添加有意义的 alt 属性，有助于SEO和无障碍访问。
+
+配置检查确保以下配置在 _config.yml 中正确设置：
+post_asset_folder: truemarked:  prependRoot: true  postAsset: true
+
+以及在 _config.yml 中添加插件：
+plugins:  - hexo-asset-img
+
+测试和部署完成文章编写和图片插入后，可以使用以下命令进行测试和部署：
+# 清理缓存hexo clean# 生成静态文件hexo generate# 启动本地服务器预览hexo server#一步到位命令hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server# 部署到GitHub Pageshexo deploy
+
+结语通过以上方法，可以在Hexo博客中插入图片。推荐使用方法一（资源文件夹），因为它能确保每篇文章的图片独立管理，避免图片混乱，并且在迁移博客时更加方便。
+希望这篇教程对你有所帮助！如果在实际操作中遇到问题，欢迎在评论区留言讨论。
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>图片</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+</search>
